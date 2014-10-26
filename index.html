@@ -175,117 +175,12 @@
 </ul>
 <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">background-color</span><span class="value">: <span class="hexcolor">#FFF000</span>;</span></div></pre></td></tr></table></figure>
 
-<p><br></p>
-<ol>
-<li>背景图片</li>
-</ol>
-<ul>
-<li>设定图片，url的路径为相对路径</li>
-</ul>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">background-image</span><span class="value">: <span class="function">url</span>(/back.jpg);</span></div></pre></td></tr></table></figure>
-
-
-<ul>
-<li>背景的图片可以选择样式，比如在水平或垂直方向上平铺。</li>
-</ul>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">backgounrd-repea<span class="variable">t:</span> <span class="built_in">repeat</span>-<span class="keyword">x</span>;</div><div class="line">backgounrd-repea<span class="variable">t:</span> <span class="built_in">repeat</span>-<span class="keyword">y</span>;</div><div class="line">backgounrd-repea<span class="variable">t:</span> <span class="keyword">no</span>-<span class="built_in">repeat</span>;</div></pre></td></tr></table></figure>
-
-
-<ul>
-<li>改变图片在背景中的位置</li>
-</ul>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">background-position</span><span class="value">: center/top/bottom/left/right;</span></div><div class="line"><span class="attribute">background-position</span><span class="value">: <span class="number">66%</span> <span class="number">33%</span>;</span>    <span class="comment">//水平，垂直</span></div><div class="line"><span class="attribute">background-position</span><span class="value">: <span class="number">50px</span> <span class="number">100px</span>;</span> <span class="comment">//左、上</span></div></pre></td></tr></table></figure>
-
-<ul>
-<li>文档下滚时背景不滚动</li>
-</ul>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">background-attachment</span>: <span class="string">fixed;</span></div></pre></td></tr></table></figure>
-
-
-<h3 id="二、CSS文本">二、CSS文本</h3>
-<p>1.&nbsp;&nbsp;通过文本属性，您可以改变文本的颜色、字符间距，对齐文本，装饰文本，对文本进行缩进</p>
-<ul>
-<li>字体</li>
-</ul>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">font-family</span>: <span class="string">sans-serif;</span></div></pre></td></tr></table></figure>
-
-<ul>
-<li>字体大小</li>
-</ul>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">font-size</span><span class="value">: <span class="number">16px</span>;</span></div><div class="line"><span class="attribute">font-size</span><span class="value">: <span class="number">1em</span>;</span>    <span class="comment">//浏览器中默认的是1em=16px大小</span></div></pre></td></tr></table></figure>
-
-
-<ul>
-<li>字体加粗斜体</li>
-</ul>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">font-style</span>: <span class="string">italic;</span></div><div class="line"><span class="attribute">font-weight</span>: <span class="string">bold;</span></div><div class="line"><span class="attribute">font-weight</span>: <span class="string">900;</span></div></pre></td></tr></table></figure>
-
-
-<ul>
-<li>改变颜色</li>
-</ul>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">color</span>: <span class="string">red;</span></div></pre></td></tr></table></figure>
-
-<ul>
-<li>字符间距(每个字符)</li>
-</ul>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">letter-spacin<span class="variable">g:</span> -<span class="number">0.5</span><span class="keyword">em</span>,<span class="number">20</span>px;</div></pre></td></tr></table></figure>
-
-<ul>
-<li>词间距(每个word)</li>
-</ul>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">word-spacing</span>: <span class="string">30px;</span></div></pre></td></tr></table></figure>
-
-
-<ul>
-<li>字符转换(大小写转换)</li>
-</ul>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">text-transform</span>: <span class="string">none,uppercase,lowercase,capitlize;</span></div></pre></td></tr></table></figure>
-
-
-<ul>
-<li>缩进文本</li>
-</ul>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">text-inden<span class="variable">t:</span> <span class="number">5</span><span class="keyword">em</span>;</div></pre></td></tr></table></figure>
-
-<ul>
-<li>水平对齐</li>
-</ul>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">text-align</span>: <span class="string">center;</span></div></pre></td></tr></table></figure>
-
-<blockquote>
-<p>&lt;center&gt;和text-align的区别是text-align只把文本对齐，而&lt;center&gt;则把整个元素居中</p>
-</blockquote>
-<ul>
-<li>处理空白字符<br>HTML默认会忽略空白字符，如果要使文本显示如html代码一样，可以加&lt;pre&gt;标签</li>
-</ul>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">white-space</span><span class="value">: pre;</span></div><div class="line"><span class="attribute">white-space</span><span class="value">: nowrap;</span>    <span class="comment">//不处理换行</span></div></pre></td></tr></table></figure>
-
-<p>2.&nbsp;&nbsp;处理连接样式<br><strong>链接的四种状态</strong><br>&nbsp;&nbsp;&nbsp;&nbsp;1. a:link              普通的、未被访问的连接<br>&nbsp;&nbsp;&nbsp;&nbsp;2. a:visited         用户已访问的连接<br>&nbsp;&nbsp;&nbsp;&nbsp;3. a:hover          鼠标指针位于连接的上方<br>&nbsp;&nbsp;&nbsp;&nbsp;4. a:active          链接被点击的时刻</p>
-<h3 id="三、CSS列表">三、CSS列表</h3>
-<ol>
-<li>更改列表的标志</li>
-</ol>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">ul</span> <span class="rules">{</span></div><div class="line">    <span class="rule"><span class="attribute">list-style-type</span>:<span class="value"> square              //方块</span></span></div><div class="line">    list-style-image: <span class="function">utl</span>(xxx.jpg)       //图片</div><div class="line">    }</div></pre></td></tr></table></figure>
-
-
-<h3 id="四、CSS表格">四、CSS表格</h3>
-<p>1.&nbsp;&nbsp;表格边框</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">table</span>, <span class="tag">th</span>, <span class="tag">td</span> <span class="rules">{</span></div><div class="line">    <span class="rule"><span class="attribute">border</span>:<span class="value"> <span class="number">1px</span> solid blue</span></span>;              <span class="rule">//双线条边框</span></div><div class="line">}</div></pre></td></tr></table></figure>
-
-
-<p>2.&nbsp;&nbsp;表格宽度和高度</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="tag">table</span> <span class="rules">{</span></div><div class="line">    <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">100%</span></span></span>;</div><div class="line"><span class="rule">}</span></div><div class="line"></div><div class="line"><span class="tag">th</span> <span class="rules">{</span></div><div class="line">    <span class="rule"><span class="attribute">height</span>:<span class="value"> <span class="number">50px</span></span></span>;</div><div class="line"><span class="rule">}</span></div></pre></td></tr></table></figure>
-
-<p>3.&nbsp;&nbsp;表格文本对齐</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">td</span> <span class="rules">{</span></div><div class="line">    <span class="rule"><span class="attribute">text-align</span>:<span class="value"> right</span></span>;</div><div class="line">    <span class="rule"><span class="attribute">vertical-align</span>:<span class="value"> bottom</span></span>;</div><div class="line"><span class="rule">}</span></div></pre></td></tr></table></figure>
-
-
-
-<p>4.&nbsp;&nbsp;表格内边距</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">td</span> <span class="rules">{</span></div><div class="line">    <span class="rule"><span class="attribute">padding</span>:<span class="value"> <span class="number">15px</span></span></span>;</div><div class="line"><span class="rule">}</span></div></pre></td></tr></table></figure>
-
-
+<p>
+        
+          <p class="article-more-link">
+            <a href="/2014/10/26/CSS学习笔记（一）/#more">more >></a>
+          </p>
+        
       
     </div>
     <footer class="article-footer">
@@ -395,7 +290,13 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h3 id="一、RDF的表示方法">一、RDF的表示方法</h3>
-<p>RDF是一张图。它的表示方法由节点、箭头组成。节点是Resource或者Property(Literal)，在Jena里面，一张图就是一个Model，Model也可以合并操作等。<br>
+<p>RDF是一张图。它的表示方法由节点、箭头组成。节点是Resource或者Property(Literal)，在Jena里面，一张图就是一个Model，Model也可以合并操作等。</p>
+<ul>
+<li>Resource： 可以是一个人，他有一些属性，resource需要URI（唯一标识符来表示）</li>
+<li>Property：  属性，属性的值也可以是Resource，可以用于连接Resource之间的关系。</li>
+<li>Literal： 字符串属性</li>
+</ul>
+<p>
         
           <p class="article-more-link">
             <a href="/2014/10/26/RDF Tutorial/#more">more >></a>

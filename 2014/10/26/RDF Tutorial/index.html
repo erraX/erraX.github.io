@@ -6,17 +6,26 @@
   <title>RDF Tutorial | Octavarium&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="一、RDF的表示方法
-RDF是一张图。它的表示方法由节点、箭头组成。节点是Resource或者Property(Literal)，在Jena里面，一张图就是一个Model，Model也可以合并操作等。">
+RDF是一张图。它的表示方法由节点、箭头组成。节点是Resource或者Property(Literal)，在Jena里面，一张图就是一个Model，Model也可以合并操作等。
+
+Resource： 可以是一个人，他有一些属性，resource需要URI（唯一标识符来表示）
+Property：  属性，属性的值也可以是Resource，可以用于连接Resource之间的关系">
 <meta property="og:type" content="article">
 <meta property="og:title" content="RDF Tutorial">
 <meta property="og:url" content="http://yoursite.com/2014/10/26/RDF Tutorial/">
 <meta property="og:site_name" content="Octavarium's Blog">
 <meta property="og:description" content="一、RDF的表示方法
-RDF是一张图。它的表示方法由节点、箭头组成。节点是Resource或者Property(Literal)，在Jena里面，一张图就是一个Model，Model也可以合并操作等。">
+RDF是一张图。它的表示方法由节点、箭头组成。节点是Resource或者Property(Literal)，在Jena里面，一张图就是一个Model，Model也可以合并操作等。
+
+Resource： 可以是一个人，他有一些属性，resource需要URI（唯一标识符来表示）
+Property：  属性，属性的值也可以是Resource，可以用于连接Resource之间的关系">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="RDF Tutorial">
 <meta name="twitter:description" content="一、RDF的表示方法
-RDF是一张图。它的表示方法由节点、箭头组成。节点是Resource或者Property(Literal)，在Jena里面，一张图就是一个Model，Model也可以合并操作等。">
+RDF是一张图。它的表示方法由节点、箭头组成。节点是Resource或者Property(Literal)，在Jena里面，一张图就是一个Model，Model也可以合并操作等。
+
+Resource： 可以是一个人，他有一些属性，resource需要URI（唯一标识符来表示）
+Property：  属性，属性的值也可以是Resource，可以用于连接Resource之间的关系">
 
   
     <link rel="alternative" href="/atom.xml" title="Octavarium&#39;s Blog" type="application/atom+xml">
@@ -156,12 +165,13 @@ RDF是一张图。它的表示方法由节点、箭头组成。节点是Resource
     <div class="article-entry" itemprop="articleBody">
       
         <h3 id="一、RDF的表示方法">一、RDF的表示方法</h3>
-<p>RDF是一张图。它的表示方法由节点、箭头组成。节点是Resource或者Property(Literal)，在Jena里面，一张图就是一个Model，Model也可以合并操作等。<br><a id="more"></a></p>
+<p>RDF是一张图。它的表示方法由节点、箭头组成。节点是Resource或者Property(Literal)，在Jena里面，一张图就是一个Model，Model也可以合并操作等。</p>
 <ul>
 <li>Resource： 可以是一个人，他有一些属性，resource需要URI（唯一标识符来表示）</li>
 <li>Property：  属性，属性的值也可以是Resource，可以用于连接Resource之间的关系。</li>
 <li>Literal： 字符串属性</li>
 </ul>
+<p><a id="more"></a></p>
 <h3 id="二、创建一个Model、Resource、添加属性">二、创建一个Model、Resource、添加属性</h3>
 <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// some definitions</span></div><div class="line"><span class="keyword">static</span> String personURI = <span class="string">"http://somewhere/JohnSmith"</span>;</div><div class="line"><span class="keyword">static</span> String fullName  = <span class="string">"John Smith"</span>;</div><div class="line"></div><div class="line"><span class="comment">// create an empty Model</span></div><div class="line">Model model = ModelFactory.createDefaultModel();</div><div class="line"></div><div class="line"><span class="comment">// create the resource</span></div><div class="line">Resource johnSmith = model.createResource(personURI);</div><div class="line"></div><div class="line"><span class="comment">// add the property</span></div><div class="line">johnSmith.addProperty(VCARD.FN, fullName);</div></pre></td></tr></table></figure>
 
