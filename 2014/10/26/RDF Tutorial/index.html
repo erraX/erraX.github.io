@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>RDF Tutorial | Octavarium&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="一、RDF的表示方法
+RDF是一张图。它的表示方法由节点、箭头组成。节点是Resource或者Property(Literal)，在Jena里面，一张图就是一个Model，Model也可以合并操作等。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="RDF Tutorial">
+<meta property="og:url" content="http://yoursite.com/2014/10/26/RDF Tutorial/">
+<meta property="og:site_name" content="Octavarium's Blog">
+<meta property="og:description" content="一、RDF的表示方法
+RDF是一张图。它的表示方法由节点、箭头组成。节点是Resource或者Property(Literal)，在Jena里面，一张图就是一个Model，Model也可以合并操作等。">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="RDF Tutorial">
+<meta name="twitter:description" content="一、RDF的表示方法
+RDF是一张图。它的表示方法由节点、箭头组成。节点是Resource或者Property(Literal)，在Jena里面，一张图就是一个Model，Model也可以合并操作等。">
+
+  
+    <link rel="alternative" href="/atom.xml" title="Octavarium&#39;s Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+
+  <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<div class="profilepic">
+			<img src="/img/touxiang.jpg">
+		</div>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Octavarium</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">Welcome!</p>
+		
+
+		
+			<div class="onoffswitch">
+			    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
+			    <label class="onoffswitch-label" for="myonoffswitch">
+			        <span class="onoffswitch-inner"></span>
+			        <span class="onoffswitch-switch"></span>
+			    </label>
+			</div>
+		
+
+		<div class="switch-area">
+			<section class="first-part">
+				<nav class="header-menu">
+					<ul>
+					
+						<li><a href="/">主页</a></li>
+			        
+						<li><a href="/archives">所有文章</a></li>
+			        
+					</ul>
+				</nav>
+				<nav class="header-nav">
+					<div class="social">
+						
+							<a class="github" target="_blank" href="https://github.com/niminjie" title="github">github</a>
+				        
+							<a class="weibo" target="_blank" href="http://weibo.com/niminjie" title="weibo">weibo</a>
+				        
+					</div>
+				</nav>
+			</section>
+			
+			
+			<section class="second-part">
+				<div class="widget tagcloud">
+					<a href="/tags/RDF/" style="font-size: 20.00px;">RDF</a><a href="/tags/hadoop/" style="font-size: 20.00px;">hadoop</a><a href="/tags/manage/" style="font-size: 10.00px;">manage</a>
+				</div>
+			</section>
+			
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay"></div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img src="/img/touxiang.jpg">
+			</div>
+
+			<hgroup>
+			  <h1 class="header-author"><a href="/">Octavarium</a></h1>
+			</hgroup>
+			
+			<p class="header-subtitle">Welcome!</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/niminjie" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/niminjie" title="weibo">weibo</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <article id="post-RDF Tutorial" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2014/10/26/RDF Tutorial/" class="article-date">
+  	<time datetime="2014-10-26T08:48:32.000Z" itemprop="datePublished">Oct 26 2014</time>
+</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/RDF/">RDF</a></li></ul>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      RDF Tutorial
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="一、RDF的表示方法">一、RDF的表示方法</h3>
+<p>RDF是一张图。它的表示方法由节点、箭头组成。节点是Resource或者Property(Literal)，在Jena里面，一张图就是一个Model，Model也可以合并操作等。<br><a id="more"></a></p>
+<ul>
+<li>Resource： 可以是一个人，他有一些属性，resource需要URI（唯一标识符来表示）</li>
+<li>Property：  属性，属性的值也可以是Resource，可以用于连接Resource之间的关系。</li>
+<li>Literal： 字符串属性</li>
+</ul>
+<h3 id="二、创建一个Model、Resource、添加属性">二、创建一个Model、Resource、添加属性</h3>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// some definitions</span></div><div class="line"><span class="keyword">static</span> String personURI = <span class="string">"http://somewhere/JohnSmith"</span>;</div><div class="line"><span class="keyword">static</span> String fullName  = <span class="string">"John Smith"</span>;</div><div class="line"></div><div class="line"><span class="comment">// create an empty Model</span></div><div class="line">Model model = ModelFactory.createDefaultModel();</div><div class="line"></div><div class="line"><span class="comment">// create the resource</span></div><div class="line">Resource johnSmith = model.createResource(personURI);</div><div class="line"></div><div class="line"><span class="comment">// add the property</span></div><div class="line">johnSmith.addProperty(VCARD.FN, fullName);</div></pre></td></tr></table></figure>
+
+<p>也可以写成下面简单的方式：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">Resource johnSmith </span>=<span class="string"> model.createResource(personURI)</span></div><div class="line">							.addProperty(VCARD.FN, fullName);</div></pre></td></tr></table></figure>
+
+<p>属性的值也可以是一个空的resource，再给他一些属性值。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="constant">Resource johnSmith</span></div><div class="line">  = model.createResource(personURI)</div><div class="line">         .addProperty(VCARD.FN, fullName)</div><div class="line">         .addProperty(VCARD.N,</div><div class="line">                      model.createResource()    <span class="comment">// 空的resource</span></div><div class="line">                           .addProperty(VCARD.Given, givenName)</div><div class="line">                           .addProperty(VCARD.Family, familyName));</div></pre></td></tr></table></figure>
+
+<h3 id="三、Statements">三、Statements</h3>
+<p>Statements就是一个三元组。</p>
+<ol>
+<li>Subject： 箭头的起点（resource）</li>
+<li>Predicate： 谓语（property的描述）</li>
+<li>Object： 箭头的终点（resource或者literal）</li>
+</ol>
+<p>Jena可以用listStatements()方法来返回一个迭代器，来遍历三元组。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// list the statements in the Model</span></div><div class="line">StmtIterator iter = model.listStatements();</div><div class="line"></div><div class="line"><span class="comment">// print out the predicate, subject and object of each statement</span></div><div class="line"><span class="keyword">while</span> (iter.hasNext()) {</div><div class="line">    Statement stmt      = iter.nextStatement();  <span class="comment">// get next statement</span></div><div class="line">    Resource  subject   = stmt.getSubject();     <span class="comment">// get the subject</span></div><div class="line">    Property  predicate = stmt.getPredicate();   <span class="comment">// get the predicate</span></div><div class="line">    RDFNode   <span class="keyword">object</span>    = stmt.getObject();      <span class="comment">// get the object</span></div><div class="line"></div><div class="line">    System.<span class="keyword">out</span>.print(subject.toString());</div><div class="line">    System.<span class="keyword">out</span>.print(<span class="string">" "</span> + predicate.toString() + <span class="string">" "</span>);</div><div class="line">    <span class="keyword">if</span> (<span class="keyword">object</span> instanceof Resource) {</div><div class="line">       System.<span class="keyword">out</span>.print(<span class="keyword">object</span>.toString());</div><div class="line">    } <span class="keyword">else</span> {</div><div class="line">        <span class="comment">// object is a literal</span></div><div class="line">        System.<span class="keyword">out</span>.print(<span class="string">" \""</span> + <span class="keyword">object</span>.toString() + <span class="string">"\""</span>);</div><div class="line">    }</div><div class="line"></div><div class="line">    System.<span class="keyword">out</span>.println(<span class="string">" ."</span>);</div><div class="line">}</div></pre></td></tr></table></figure>
+
+<h3 id="四、读写RDF">四、读写RDF</h3>
+<p>Jena可以把RDF写入到XML和写出XML文件。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// create an empty model</span></div><div class="line"> Model model = ModelFactory.createDefaultModel();</div><div class="line"></div><div class="line"> <span class="comment">// use the FileManager to find the input file</span></div><div class="line"> InputStream <span class="keyword">in</span> = FileManager.<span class="keyword">get</span>().open( inputFileName );</div><div class="line"><span class="keyword">if</span> (<span class="keyword">in</span> == <span class="keyword">null</span>) {</div><div class="line">    <span class="keyword">throw</span> <span class="keyword">new</span> IllegalArgumentException(</div><div class="line">                                 <span class="string">"File: "</span> + inputFileName + <span class="string">" not found"</span>);</div><div class="line">}</div><div class="line"></div><div class="line"><span class="comment">// read the RDF/XML file</span></div><div class="line">model.read(<span class="keyword">in</span>, <span class="keyword">null</span>);</div><div class="line"></div><div class="line"><span class="comment">// write it to standard out</span></div><div class="line">model.write(System.<span class="keyword">out</span>);</div></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2014/10/26/Hadoop集群搭建手册/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">&lt;</strong>
+      <div class="article-nav-title">
+        
+          Hadoop集群搭建手册
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+  
+</article>
+
+
+
+
+
+
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2014 Octavarium
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+
+  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+
+  <script src="/js/main.js" type="text/javascript"></script>
+
+
+  </div>
+</body>
+</html>
