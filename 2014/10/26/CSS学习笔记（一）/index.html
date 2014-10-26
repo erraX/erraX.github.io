@@ -3,17 +3,32 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Octavarium&#39;s Blog</title>
+  <title>CSS学习笔记（一） | Octavarium&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="my personal blog about computer science">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Octavarium's Blog">
-<meta property="og:url" content="http://yoursite.com/">
+  <meta name="description" content="CSS基本语法
+
+1234567&lt;style&gt;    p {        background-color: gray;        font-size: 16px;    }&lt;/style&gt;&lt;p style='background-color:gray;font-size:16px'&gt; Paragraph1 &lt;/p&gt;
+
+
+每个属性后面要加分号，">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS学习笔记（一）">
+<meta property="og:url" content="http://yoursite.com/2014/10/26/CSS学习笔记（一）/">
 <meta property="og:site_name" content="Octavarium's Blog">
-<meta property="og:description" content="my personal blog about computer science">
+<meta property="og:description" content="CSS基本语法
+
+1234567&lt;style&gt;    p {        background-color: gray;        font-size: 16px;    }&lt;/style&gt;&lt;p style='background-color:gray;font-size:16px'&gt; Paragraph1 &lt;/p&gt;
+
+
+每个属性后面要加分号，">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Octavarium's Blog">
-<meta name="twitter:description" content="my personal blog about computer science">
+<meta name="twitter:title" content="CSS学习笔记（一）">
+<meta name="twitter:description" content="CSS基本语法
+
+1234567&lt;style&gt;    p {        background-color: gray;        font-size: 16px;    }&lt;/style&gt;&lt;p style='background-color:gray;font-size:16px'&gt; Paragraph1 &lt;/p&gt;
+
+
+每个属性后面要加分号，">
 
   
     <link rel="alternative" href="/atom.xml" title="Octavarium&#39;s Blog" type="application/atom+xml">
@@ -123,9 +138,7 @@
 		</header>				
 	</div>
 </nav>
-      
-  
-    <article id="post-CSS学习笔记（一）" class="article article-type-post" itemscope itemprop="blogPost">
+      <article id="post-CSS学习笔记（一）" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
       <a href="/2014/10/26/CSS学习笔记（一）/" class="article-date">
@@ -145,8 +158,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2014/10/26/CSS学习笔记（一）/">CSS学习笔记（一）</a>
+    <h1 class="article-title" itemprop="name">
+      CSS学习笔记（一）
     </h1>
   
 
@@ -294,68 +307,17 @@
     </footer>
   </div>
   
-</article>
-
-
-
-
-
-
-  
-    <article id="post-Hadoop集群搭建手册" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2014/10/26/Hadoop集群搭建手册/" class="article-date">
-  	<time datetime="2014-10-26T08:49:44.000Z" itemprop="datePublished">Oct 26 2014</time>
-</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hadoop/">hadoop</a></li></ul>
-
-    </div>
-  
-  <div class="article-inner">
     
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2014/10/26/Hadoop集群搭建手册/">Hadoop集群搭建手册</a>
-    </h1>
   
+    <a href="/2014/10/26/Hadoop集群搭建手册/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Hadoop集群搭建手册</div>
+      <strong class="article-nav-caption">&gt;</strong>
+    </a>
+  
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="一、Hadoop_SSH免密钥登陆">一、Hadoop SSH免密钥登陆</h2>
-<p>1.&nbsp;&nbsp;在Master节点上：</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="variable">$ </span>ssh-keygen -t dsa -<span class="constant">P </span>“” -f ~<span class="regexp">/.ssh/id</span>_dsa</div><div class="line"><span class="variable">$ </span>cat ~<span class="regexp">/.ssh/id</span>_dsa.pub &gt;&gt; ~<span class="regexp">/.ssh/authorized</span>_keys</div></pre></td></tr></table></figure>
-
-
-<p>2.&nbsp;&nbsp;将Master节点上得密钥添加到当前节点上：</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="input"><span class="prompt">$ cat ~/.ssh/master.pub &gt;&gt;</span> ~<span class="regexp">/.ssh/authorized</span>_keys</span></div></pre></td></tr></table></figure>
-
-<p>3.&nbsp;&nbsp;将公共密钥和私密拷贝到Slaves节点上：</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="variable">$ </span>scp ~<span class="regexp">/.ssh/</span>* <span class="symbol">slave1:</span>~<span class="regexp">/.ssh/</span></div><div class="line"><span class="variable">$ </span>scp ~<span class="regexp">/.ssh/</span>* <span class="symbol">slave2:</span>~<span class="regexp">/.ssh/</span></div></pre></td></tr></table></figure>
-
-
-
-        
-          <p class="article-more-link">
-            <a href="/2014/10/26/Hadoop集群搭建手册/#more">more >></a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      
-      
-    </footer>
-  </div>
   
 </article>
 
@@ -363,61 +325,6 @@
 
 
 
-
-  
-    <article id="post-RDF Tutorial" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2014/10/26/RDF Tutorial/" class="article-date">
-  	<time datetime="2014-10-26T08:48:32.000Z" itemprop="datePublished">Oct 26 2014</time>
-</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/RDF/">RDF</a></li></ul>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2014/10/26/RDF Tutorial/">RDF Tutorial</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="一、RDF的表示方法">一、RDF的表示方法</h3>
-<p>RDF是一张图。它的表示方法由节点、箭头组成。节点是Resource或者Property(Literal)，在Jena里面，一张图就是一个Model，Model也可以合并操作等。<br>
-        
-          <p class="article-more-link">
-            <a href="/2014/10/26/RDF Tutorial/#more">more >></a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-
-
-
-  
-  
 
       <footer id="footer">
   <div class="outer">
