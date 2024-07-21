@@ -10,31 +10,61 @@ During code reivew, you may be asked to split a large MR into smaller ones. It w
 However, sometimes it's very challenging for developers to split a large MR to smaller ones.
 
 ## What is a large MR? And why reviewing a large MR is very hard?
+1. Reviewer need to take a lot log time to go thorugh all the changed files
+2. Reviewer may lost in huge amount of code changes, and it's hard to understand the code changes.
 
 ## Workflow
 ### 1. Checkout a branch from master to start implementation
-```bash
+```shell
 $ git checkout -b feature master
 ```
 
-### 2. Once you finished, create a patch that helps you partialy review the MR
-```bash
-# Target branch : master
-# Feature branch: feature
-
+### 2. Once you finished development, create a patch that helps you partialy review the MR
+```shell
 $ git checkout -b feature-mr-1
-$ git reset master
-
-$ git add xxx
-$ git commit
-
-# Create MR-1
+$ git diff master feature > path/to/path_file
 ```
 
-## Commands
-### Difference between two branches
-```bash
-$ git diff HEAD..target-branch -- path/to/folder
+### 3. Apply patch and start review
+```shell
+$ git fetch
+$ git checkout -b feature-mr-1 origin/master
+$ git apply path/to/patch_file
+
+# Staged changes you want to put in the MR
+$ git add some_files.js
+$ git commit
+
+
+# Save changes
+$ git stash -uk
+```
+
+### 4. Create other parallel MRs
+```shell
+$ git fetch
+$ git checkout -b feature-mr-2 origin/master
+$ git stash apply
+
+# Staged changes you want to put in the MR
+$ git add some_files.js
+$ git commit
+```
+
+### 5. Once your MR is merged, rebase your feature branch with master
+```shell
+$ git fetch
+$ git checkout feature
+$ git rebase origin/master
+```
+
+### 7. Revision MR
+#### Compare you current branch with your patch file
+```shell
+$ git checkout -b tmp master
+$ git apply path/to/patch_file
+$ git commit -am "tmp"
+$ git diff mr tmp
 ```
 
 ## References
